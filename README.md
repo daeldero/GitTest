@@ -72,3 +72,25 @@ git checkout -
 * 'checkout' switch commits (or branches).
 * '-' option means the latest commit.
 - - -
+
+# Upload to remote repository
+
+### Register remote repository
+```
+git remote add < remote_name > < remote_address >
+git remote -v
+```
+* In general, 'origin' is used as *remote_name*.
+* Several remote repositories can be registered, but each has only one same name.
+* '-v' option shows list of remote repository.
+
+### Push: Upload the local to remote
+```
+git push -u < remote_name > < local_name (branch_name) >
+git push
+```
+* '-u' (= '--set-upstream') option sets upstream branch.
+  * *Upstream branch* is a remote branch associated with local repository.
+  * At the first *push*, upstream branch must be set.
+* After the upstream is set, then just 'git push' works without any option.
+- - -

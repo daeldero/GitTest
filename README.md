@@ -94,3 +94,36 @@ git push
   * At the first *push*, upstream branch must be set.
 * After the upstream is set, then just 'git push' works without any option.
 - - -
+
+# Download from remote repository
+
+### Clone: Not download, do clone
+```
+git clone < remote_address >
+git clone < remote_address > .
+git clone < remote_address > < folder_directory >
+```
+* **Download** copies only the source code not version information.
+* **Clone** copies the remote repository fully.
+* '.' option makes to be cloned to the current folder.
+  * If not '.' exists, another folder will be added.
+
+### Fetch: Update only commits from remote
+```
+git fetch < remote_name >
+```
+* Change only contents of '.git' folder.
+* Not change the working tree.
+* To check the contents of modified commits, do 'checkout *commit*.
+
+### Fast-forward: Update working tree with latest commit from 'fetch'
+```
+git merge
+```
+* Merge local commit and fetched commit as fetched commit.
+
+### Pull: Update local totally from remote
+```
+git pull < remote_name > < branch_name >
+```
+* 'pull' = 'fetch' + 'merge'

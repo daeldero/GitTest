@@ -36,3 +36,39 @@ git commit -am "< description_about_this_commit >"
 * '-a' option means *add* that performs *add* and *commit* at once.
 * '-am' = '-a' + '-m'
 - - -
+
+# Now, the contents of this md. file is changed
+
+### Check the status of Git worktree
+```
+git status
+git status -s
+```
+* File status
+  * *Untracked* file: File ever uncommited
+  * *Staged* file: File added in local repository (stage)
+  * *Unmodified* file: Commited file without any modification after commit
+  * *Modified* file: Commited file with modification after commit
+
+### Add and commit the modified file
+```
+git commit -am "< description_about_this_update >"
+```
+* '-a' or '-am' is not allowed for untracked file.
+
+### Check the history of commits
+```
+git log
+git log -< number >
+git log --oneline
+```
+* '-*number*' option shows only *number* commits.
+* '--oneline' option shows commit message in short.
+
+```
+git checkout < first_7_numbers_of_commit >
+git checkout -
+```
+* 'checkout' switch commits (or branches).
+* '-' option means the latest commit.
+- - -
